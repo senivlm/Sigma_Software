@@ -36,7 +36,7 @@ namespace Shop_Task
         {
             this.AllProducts = new List<object>();
         }
-
+//метод, який заточений під конкретну конфігурацію і не дасть системі розвиватись
         public void FillStorage()
         {
             do
@@ -117,7 +117,7 @@ namespace Shop_Task
         {
             Product product = CreateProduct();
             DateTime dt;
-
+//діалог має бути ззовні!
             while (true)
             {
                 Console.Write("Input expire date (yyyy mm dd): ");
@@ -126,6 +126,7 @@ namespace Shop_Task
                 if (!regex.IsMatch(input))
                 {
                     Console.WriteLine("!!!Invalid input!!!");
+                    //не бажане використання
                     continue;
                 }
                 string[] dateStr = input.Split(" ");
@@ -139,6 +140,7 @@ namespace Shop_Task
                     dt = new DateTime(dateInt[0], dateInt[1], dateInt[2]);
                     break;
                 }
+                //Неспеціалізований виняток. також його опрацювання можна перенести на рівень вверх
                 catch (Exception)
                 {
                     Console.WriteLine("!!!Invalid date!!!");
@@ -246,7 +248,7 @@ namespace Shop_Task
         }
     
         public object this[int i]
-        {
+        {// неконтрольовані індекси
             get { return AllProducts[i]; }
             set 
             {
