@@ -116,7 +116,7 @@ namespace HW_4
                 }
             }
             set
-            {
+            {// треба теж контролювати індекси
                 arr[index] = value;
             }
         }
@@ -128,7 +128,7 @@ namespace HW_4
         public bool IsPalindrom()
         {
             int half = arr.Length / 2;
-
+// можна обходитись і одним індексом
             for (int i = 0, j = arr.Length - 1; i < half; i++, j--)
             {
                 if (arr[i] != arr[j])
@@ -164,6 +164,7 @@ namespace HW_4
             {
                 int start = i;
                 int end = i + 1;
+                //При такій реалізації по кілька разів проходитесь по масиву.
                 for (int j = i + 1; j < arr.Length; j++)
                 {
                     if (arr[i] == arr[j])
@@ -185,7 +186,7 @@ namespace HW_4
         }
 
         public void ShuffleInitialization()
-        {
+        {//краще просто міняти під довільними індексами 
             Random rnd = new Random();
             List<int> lst = new List<int>();
             for (int i = 1; i <= arr.Length; i++)
