@@ -10,7 +10,7 @@ namespace HW_5
     class Vector
     {
         private int[] arr;
-
+// Краще ліквідувати цю властивість!
         public int[] Arr { get => arr; private set => arr = value; }
 
         #region constructors
@@ -412,7 +412,7 @@ namespace HW_5
                 Arr[index] = value;
             }
         }
-
+// Не побачила для файла з обмеженням оперативки
         public void SplitMergeSort()
         {
             SplitMergeSort(0, Arr.Length);
