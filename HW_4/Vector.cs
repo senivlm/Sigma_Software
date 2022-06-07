@@ -230,6 +230,7 @@ namespace HW_4
         Вибрати опорний елемент: як середній елемент масиву, перший та останній. 
         Всі варіанти методів реалізувати. 
          */
+            
         public void QuickSort(Pivot pivot)
         {
             List<int> arrToSort = new List<int>(arr);
@@ -248,7 +249,7 @@ namespace HW_4
                     break;
             }
         }
-
+// Краще один метод з передачею параметра індекса опорного елемента
         private static void QuickSortEnd(int[] arr, int startIndex, int endIndex)
         {
             if (startIndex < endIndex)
@@ -312,7 +313,7 @@ namespace HW_4
                 return (endOfRightPart - 1);
             }
         }
-
+//Якщо статичні методи, то краще їх реалізувати в окремому статичному класі
         private static void QuickSortMiddle(int[] arr, int startIndex, int endIndex)
         {
             int pivot = arr[(startIndex + (endIndex - startIndex) / 2)];
