@@ -3,7 +3,7 @@
 namespace HW_4
 {
     class Program
-    {
+    {// Ваш номер 36
         static void Main(string[] args)
         {
             Vector vc1 = new Vector(50);
@@ -14,6 +14,7 @@ namespace HW_4
 
             Vector vc2 = new Vector(50);
             vc2.RandomInitialization(0, 30);
+            // також як параметр варто було б передати напрям сортування
             vc2.QuickSort(Pivot.MIDDLE);
             Console.WriteLine(vc2);
             Console.WriteLine("*******************************\n*******************************");
