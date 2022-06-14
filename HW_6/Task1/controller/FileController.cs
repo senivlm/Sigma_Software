@@ -137,7 +137,7 @@ namespace HW_6.Task1.controller
         }
 
         private string AppartmentToTableString(Appartment appartment, int nameLenght)
-        {
+        {// озвучіть на занятті використання CenterString(
             string number = CenterString(appartment.Number.ToString(), 10);
             string name = CenterString(appartment.OwnerName, Convert.ToInt32(nameLenght * 1.5));
             var meterData = appartment.MeterData;
