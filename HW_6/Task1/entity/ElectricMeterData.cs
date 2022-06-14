@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HW_6.Task1.entity
-{
+{// Чудово. Так тримати!
     
     class ElectricMeterData
     {
