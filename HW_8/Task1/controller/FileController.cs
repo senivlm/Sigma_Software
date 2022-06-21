@@ -21,7 +21,7 @@ namespace HW_8.Task1.controller
             try
             {
                 using (StreamReader reader = new StreamReader(path))
-                {
+                {//пояснити регулярний вираз
                     var headerPattern = @"[1-9]{1,} [1-4]";
                     var headerReg = new Regex(headerPattern);
                     string header = reader.ReadLine();
