@@ -38,7 +38,7 @@ namespace HW_8.Task2
             }
             return count;
         }
-
+        //користувач очікує час , а не текст
         public string GetMostPopularDayOfWeek()
         {
                 Dictionary<String, int> stat = GetDictionaryWithFrequency(line => line.Split(" ")[2], path);
