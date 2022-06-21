@@ -24,6 +24,7 @@ namespace HW_7.controller_services
                         Console.WriteLine(logLine);
                         Console.WriteLine("Repair? Answer(y/n): ");
                         string answ = Console.ReadLine();
+                       // легко можна уникнути
                         if (answ != "y")
                         {
                             continue;
