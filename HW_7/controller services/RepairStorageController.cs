@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 namespace HW_7.controller_services
 {
     class RepairStorageController
-    {
+    {// чому не статичний метод. 
         public void RepairFromLogs(string logPath, DateTime date)
         {
             using (StreamReader logReader = new StreamReader(logPath))
@@ -29,6 +29,7 @@ namespace HW_7.controller_services
                             continue;
                         }
                         string file = Regex.Match(logLine, @"--(.+)--").Value.Replace("--", "");
+                        //невдалий ідентифікатор
                         int line = int.Parse(Regex.Match(logLine, @"\+(.+)\+").Value.Replace("+", ""));
                         using (StreamReader dataReader = new StreamReader(file))
                         {
