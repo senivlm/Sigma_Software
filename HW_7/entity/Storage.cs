@@ -56,7 +56,7 @@ namespace HW_7.entity
         }
         
         public void ChangeAllPricesByPercentage(double percentage)
-        {
+        {// Не зрозуміла конструкція
             foreach (var item in AllProducts)
             {
                 switch (item)
