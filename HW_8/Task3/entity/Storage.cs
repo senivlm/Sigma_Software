@@ -23,7 +23,7 @@ namespace HW_8.Task3.entity
             this.AllProducts = allProducts;
         }
         #endregion
-
+//Властивість лишня. Це за собою тягне наслідки в інших методах
         #region properties
         protected List<Product> AllProducts
         {
