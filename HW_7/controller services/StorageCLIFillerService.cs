@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace HW_7.controller_services
-{
+{// у Вас у всіх сервісах дуже злита разом робота і відображення, що не відповідає принципам SOLID
     class StorageCLIFillerService
     {
 
