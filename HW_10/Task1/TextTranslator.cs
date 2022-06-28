@@ -15,11 +15,12 @@ namespace HW_10.Task1
         public TextTranslator(string text, WordDictionary dictionary)
         {
             this.text = text;
+            // проблема неглибоких копій
             this.dictionary = dictionary;
         }
 
         public string PerformTranslation()
-        {
+        {// де врахування кількості пропусків між словами?
             //масив слів, за допомогою яких відбуватимется пошук у словнику і обмін
             string[] wordsForSearch = StringManipulator.TransformAllToLower(StringManipulator.SplitTextBy(text, " "));
 
@@ -46,7 +47,7 @@ namespace HW_10.Task1
         {
             
             for (int i = 0; i < translated.Length; i++)
-            {
+            {//Негарне використання
                 if (translated[i] == "")
                 {
                     continue;
