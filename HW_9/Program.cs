@@ -8,7 +8,7 @@ using System.IO;
 namespace HW_9
 {
     class Program
-    {
+    {// Молодець. Трішки є перемудровування. Але видно, що добре володієте технікою.
         static void Main(string[] args)
         {
             Console.InputEncoding = System.Text.Encoding.Unicode;
