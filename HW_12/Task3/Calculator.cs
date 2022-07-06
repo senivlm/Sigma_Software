@@ -9,9 +9,9 @@ namespace HW_12.Task3
 {
     static class Calculator
     {
-
+// Де перетворення у польський запис?
         public static double Evaluate(string expression)
-        {
+        {//Людині незручно писати через пропуск. Це задача програміста поділити на лексеми.Стрічка прийти має без пропусків.
             string[] elements = expression.Split(' ', StringSplitOptions.RemoveEmptyEntries);
             //LIFO
             Stack<double> numbers = new();
@@ -25,10 +25,12 @@ namespace HW_12.Task3
                         numbers.Push(double.Parse(item));
                     }
                     //якщо операція
+                    // так добре, але для конкретного випадку. Якщо я скажу додати нову операцію, це буде незручно зробити, тому що потрібно шукати цю стрічку і вникати в логіку коду.А також шукати, де можна врахувати потрібний пріоритет
                     else if (Regex.IsMatch(item, @"\+|\-|\/|\*|\^"))
                     {
                         double first = numbers.Pop();
                         double second = numbers.Pop();
+                        .
                         switch (item)
                         {
                             case "+":
