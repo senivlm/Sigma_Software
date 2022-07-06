@@ -12,7 +12,7 @@ namespace HW_12.Task1
     class Demo
     {
         public static void Start()
-        {
+        {// При створенні може бути також задіяна подія. Вам це не вдасться зробити таким чином. Буду пояснювати на занятті ще раз.
             Storage storage = Storage.CreateFrom(StorageFileReader.Read());
 
             //Event
