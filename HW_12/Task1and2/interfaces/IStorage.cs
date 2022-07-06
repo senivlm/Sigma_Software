@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace HW_12.Task1.interfaces
 {
     interface IStorage
-    {
+    {//а де будуть методи фільтрації, сортування, порівняння іт.ін?
         public List<Product> GetAllProducts();
         public Product GetProductById(string id);
         public List<Product> GetProductsByType(Type type);
