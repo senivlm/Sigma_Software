@@ -12,7 +12,7 @@ namespace HW_12.Task1
     class Demo
     {
         public static void Start()
-        {
+        {//Обійшли подію.
             Storage storage = Storage.CreateFrom(StorageFileReader.Read());
 
             //Event
