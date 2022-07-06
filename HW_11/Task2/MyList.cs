@@ -17,7 +17,7 @@ namespace HW_11.Task2
         }
 
         public MyList(List<T> lst)
-        {
+        {//Неглибока копія!!!!
             this.lst = lst;
         }
 
