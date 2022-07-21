@@ -21,6 +21,7 @@ namespace HW_13
                 new entities.CashRegister(1, new(0,1)),
                 new entities.CashRegister(2, new(0,2)),
             });
+            // У касах є події. Де відбувається підписування на них?
 
             using (StreamWriter writer = File.CreateText(@"txtData/result.txt"))
             {
