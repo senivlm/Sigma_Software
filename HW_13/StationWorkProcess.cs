@@ -24,7 +24,7 @@ namespace HW_13
         public Report StartWork()
         {
             foreach (var item in registers)
-            {
+            {// бачу підписування
                 item.OnMaxSizeAdding += OnAddingOverMaxHandler;
                 item.OnStopWorking += OnStopWorkingHandler;
             }
@@ -35,6 +35,9 @@ namespace HW_13
             //розподілення початкових людей до касс
             ArrangeNewPeople(people);
             //так як люди вже закріплені за касою, очищуємо ліст
+            // Була трішки інша ідея. Людина виймається з списку з певним інтервалом часу, заданим користувачем.
+            
+            
             people.Clear();
 
 
@@ -83,7 +86,7 @@ namespace HW_13
                 }
                 if (!isMoreWork)
                 {
-                    break;
+                    break;// відбудеться переривання плину часу без повернення. А потрібно призупинити запуск користувачів і  зробити це через подію.
                 }
                 Thread.Sleep(100);
             }
@@ -100,6 +103,7 @@ namespace HW_13
             {
                 var working = (from reg in registers where reg.IsWorking && reg.IsAccepting select reg).ToList();
                 int minQueue = working.Min(reg => reg.QueueLength);
+                // можна методом розширення.
                 List<CashRegister> minRegisters =
                     (from reg in registers 
                      where reg.QueueLength == minQueue && reg.IsWorking && reg.IsAccepting  
