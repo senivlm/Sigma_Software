@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace HW_14.Task2.serialisation
-{
+{Серіалізація дуже добре.
+    
     internal static class StorageSerialisation
     {
         #region JSON
