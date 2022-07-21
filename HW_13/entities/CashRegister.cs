@@ -13,6 +13,7 @@ namespace HW_13.entities
         private int number;
         private Position position;
         Person servedPerson; // персона яка вже розпочала роботу з касою
+        // за умовою задачі пріоритет мав би бути стрічкою
         PriorityQueue<Person, int> queuePersons;
         private bool isWorking;
         private bool isAccepting;
