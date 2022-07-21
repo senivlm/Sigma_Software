@@ -7,7 +7,7 @@ namespace HW_13
     internal class Program
     {
         static void Main(string[] args)
-        {
+        {//Ваш новий номер 25
             /*PersonGenerator generator = new();
             List<entities.Person> people = generator.Generate();
 
